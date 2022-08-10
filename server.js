@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose')
+//const mongoose = require('mongoose')
 const api = require('./server/routes/api');
 
-mongoose.connect('mongodb://localhost/ResumeDB', {useNewUrlParser: true})
+//mongoose.connect('mongodb://localhost/ResumeDB', {useNewUrlParser: true})
 
 const app = express();
 app.use(express.json());

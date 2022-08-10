@@ -1,11 +1,40 @@
 .main-content {
-  margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
-
+.template{
+  position: fixed;
+  top : -320px;
+  right :-230px;
+  padding: 30px;
+  -webkit-transform: scale(0.4, 0.4);
+  overflow: auto;
+}
+.main{
+  display: flex;
+}
+.button3{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#4eb5f1;
+  text-align:center;
+  transition: all 0.2s;
+}
+  a.button3:hover{
+  background-color:#4095c6;
+  }
 .left-section {
-  grid-column: span 2;
+  grid-column: span 3;
   height: 100%;
   background-color: #00324a;
 }
@@ -23,6 +52,7 @@
   border-bottom: 1px solid #002333;
 }
 
+
 .image {
   width: 100%;
   text-align: center;
@@ -34,12 +64,12 @@
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 1.2rem 0;
+  padding: 0.6rem 0;
 }
 
 .career {
@@ -214,46 +244,32 @@
   transform: translateX(-50%);
   left: 0;
 }
+.form{
+  width: 40%;
+  height: 100%;
 
+}
 /*Media Querries*/
-@media screen and (max-width: 823px) {
-  .right-title::after {
-    width: 40%;
-  }
+
+@media screen and (max-width: 800px) {
+  .template {
+position: static;  
+-webkit-transform: scale(0.8, 0.8);
+grid-template-columns: repeat(7, 1fr);
 }
-@media screen and (max-width: 681px) {
-  .right-title::after {
-    width: 30%;
-  }
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-@media screen and (max-width: 780px) {
-  .timeline {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.form{
+  width: 100%;
 }
-@media screen and (max-width: 780px) {
-  .left-section {
-    grid-column: span 3;
-  }
-  .right-section {
-    grid-column: span 4;
-  }
+.right-section {
+  grid-column: span 4;
 }
-@media screen and (max-width: 1200px) {
-  .main-content {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .profile img {
-    width: 40%;
-  }
+.left-section{
+  grid-column:span 3;
 }
-@media screen and (max-width: 700px) {
-  .profile img {
-    width: 60%;
-  }
 }
-@media screen and (max-width: 390px) {
-  .name {
-    font-size: 1.5rem;
-  }
-}
+

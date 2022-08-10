@@ -3,6 +3,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <link href="{{ asset('css/invoice.css') }}" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,16 +24,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="mainstyle.css" />
-    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <nav class="header" style="background-color: black; height: 60px"></nav>
-    <main class="main">
+    <nav class="header" style="background-color: black; height: 60px">
+      <a id="download" class="button3">Export As PDF</a>
+    </nav>
+    <div class="main">
       <div
         class="form"
-        style="position: absolute; top: 70px; left: 0; width: 44%; height: 100%"
+    
       >
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
@@ -937,27 +942,25 @@
           </div>
         </div>
       </div>
-      <div id="wrap">
         <div
-          class="template"
+          class="template" 
           style="
-            -webkit-transform: scale(0.6);
-            position: absolute;
-            top: 70px;
-            left: 46%;
-            width: 55%;
-            height: 100%;
+            
+            width: 100%;
           "
         >
-          <main class="main-content">
+          <main class="main-content"  id="resumepdf">
             <section class="left-section">
               <div class="left-content">
                 <div class="templateProfile">
                   <div class="image">
                     <!-- <img src="/avatar.jpg" alt="" /> -->
                   </div>
-                  <h2 class="name" id="personalFirstName">Lorem Dola Ipsum</h2>
-                  <h2 class="name" id="personalSecondName"></h2>
+                  <h2 class="name">
+                    <span class="name" id="personalFirstName">Lorem Dola Ipsum</span>
+                    <span class="name" id="personalSecondName"></span>
+                  </h2>
+                  
                   <p class="career" id="jobTitle">Software Engineer</p>
                 </div>
                 <div class="contact-info">
@@ -1083,8 +1086,26 @@
           </main>
         </div>
       </div>
-    </main>
 
+    <script>
+        
+        window.onload = function(){
+          document.getElementById("download")
+          .addEventListener("click",()=> {
+           const invoice = this.document.getElementById("resumepdf");
+           var opt = {
+    margin:       1,
+    filename:     'myfile.pdf',
+    image:        { type: 'png', quality: 0.98 },
+    html2canvas:  { scale: 3, scrollY: 0 },
+    jsPDF:        { unit: 'in', format: 'A3', orientation: 'portrait' }
+};;
+        
+           html2pdf().from(invoice).set(opt).save();
+        
+          })
+        }
+      </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
