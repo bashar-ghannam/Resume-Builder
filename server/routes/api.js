@@ -1,13 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const Item = require('../models/Item')
-
-
-router.get('/city/:city', (req, res) => {
-})
+const Resume = require('../models/UserInfo')
 
 router.get('/get', (req, res) => {
-    Item.find({}, function(err, data) {
+    Resume.find({}, function(err, data) {
         console.log(data)
         res.send(data)
     })

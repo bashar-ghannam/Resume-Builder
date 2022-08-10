@@ -3,6 +3,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <link href="{{ asset('css/invoice.css') }}" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,16 +24,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+
     <title>Document</title>
   </head>
   <body>
-    <nav class="header" style="background-color: black; height: 60px"></nav>
-    <main class="main">
-      <div
-        class="form"
-        style="position: absolute; top: 70px; left: 0; width: 44%; height: 100%"
-      >
+    <nav class="header" style="background-color: black; height: 60px">
+      <a id="download" class="button3">Export As PDF</a>
+    </nav>
+    <div class="main">
+      <div class="form">
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -954,154 +958,163 @@
           </div>
         </div>
       </div>
-      <div id="wrap">
-        <div
-          class="template"
-          style="
-            -webkit-transform: scale(0.6);
-            position: absolute;
-            top: 70px;
-            left: 46%;
-            width: 55%;
-            height: 100%;
-          "
-        >
-          <main class="main-content">
-            <section class="left-section">
-              <div class="left-content">
-                <div class="templateProfile">
-                  <div class="image">
-                    <img src="" alt="" />
-                  </div>
-                  <h2 class="name" id="personalFirstName">Lorem Dola Ipsum</h2>
-                  <h2 class="name" id="personalSecondName"></h2>
-                  <p class="career" id="jobTitle">Software Engineer</p>
+      <div class="template" style="width: 100%">
+        <main class="main-content" id="resumepdf">
+          <section class="left-section">
+            <div class="left-content">
+              <div class="templateProfile">
+                <div class="image">
+                  <img src="" alt="" />
                 </div>
-                <div class="contact-info">
-                  <h3 class="main-title">Contact Info</h3>
-                  <ul>
-                    <li id="personalPhone">
-                      <i class="fa fa-phone"></i>
-                      07661892982
-                    </li>
-                    <li id="personalEmail">
-                      <i class="fa fa-envelope"></i>
-                      loremipsum@gmail.com
-                    </li>
-                    <li id="githubTemplate">
-                      <i class="fa fa-github"></i>
-                      www.loremipsum.com
-                    </li>
-                    <li id="facebookTemplate">
-                      <i class="fa fa-facebook"></i>
-                      www.facebook.com/lorem
-                    </li>
-                    <li id="linkedinTemplate">
-                      <i class="fa fa-linkedin-square"></i>
-                      @loremipsum
-                    </li>
-                    <li id="twitterTemplate">
-                      <i class="fa fa-twitter"></i>
-                      37 Pramount St, London
-                    </li>
-                  </ul>
-                </div>
-                <div class="hobbies-section">
-                  <h3 class="main-title">Hobbies</h3>
-                  <ul id="hobbies-list">
-                    <li>
-                      <p class="skill-title">Wordpress</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="references-section">
-                  <h3 class="main-title">References</h3>
-                  <div class="referee">
-                    <ul id="references-list">
-                      <li>
-                        <h6 class="sub-title">Rick Ross</h6>
-                        <p class="sub-para">Product Manager</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="languages-section">
-                  <h3 class="main-title">Languages</h3>
-                  <ul id="languages-list">
-                    <li>
-                      <p class="skill-title">Arabic:good</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="skills-section">
-                  <h3 class="main-title">Skills</h3>
-                  <ul id="skills-list">
-                    <li>
-                      <p class="skill-title">Wordpress:good</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <section class="right-section">
-              <div class="right-main-content">
-                <section class="about sect">
-                  <h2 class="right-title">About Me</h2>
-                  <p class="para" id="profileDesc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto iusto porro suscipit. Nihil blanditiis cum
-                    voluptates odio recusandae deleniti, nulla repudiandae
-                    aliquam adipisci iusto reiciendis sequi labore quos ratione
-                    accusamus consectetur, libero ex assumenda pariatur commodi
-                    animi nobis, dolore id.
-                  </p>
-                </section>
-                <section class="experince sect" id="experienceTemplate">
-                  <h2 class="right-title">Experience</h2>
-                  <div class="timeline">
-                    <div class="left-tl-content">
-                      <h5 class="tl-title">Microsoft</h5>
-                      <p class="para">2017 - 2019</p>
-                    </div>
-                    <div class="right-tl-content">
-                      <div class="tl-content">
-                        <h5 class="tl-title-2">Junior Developer</h5>
-                        <p class="para">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Molestias cupiditate vitae voluptatem deleniti,
-                          laboriosam odio nobis quae fugit facilis quo.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section class="education sect" id="educationTemplate">
-                  <h2 class="right-title">education</h2>
-                  <div class="timeline">
-                    <div class="left-tl-content">
-                      <h5 class="tl-title">Cheney School</h5>
-                      <p class="para" id="major">engineering</p>
-                      <p class="para" id="date">2015 - 2016</p>
-                    </div>
-                    <div class="right-tl-content">
-                      <div class="tl-content">
-                        <h5 class="tl-title-2">Gcse's</h5>
-                        <p class="para">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Molestias cupiditate vitae voluptatem deleniti,
-                          laboriosam odio nobis quae fugit facilis quo.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </section>
-          </main>
-        </div>
-      </div>
-    </main>
+                <h2 class="name">
+                  <span class="name" id="personalFirstName"
+                    >Lorem Dola Ipsum</span
+                  >
+                  <span class="name" id="personalSecondName"></span>
+                </h2>
 
+                <p class="career" id="jobTitle">Software Engineer</p>
+              </div>
+              <div class="contact-info">
+                <h3 class="main-title">Contact Info</h3>
+                <ul>
+                  <li id="personalPhone">
+                    <i class="fa fa-phone"></i>
+                    07661892982
+                  </li>
+                  <li id="personalEmail">
+                    <i class="fa fa-envelope"></i>
+                    loremipsum@gmail.com
+                  </li>
+                  <li id="githubTemplate">
+                    <i class="fa fa-github"></i>
+                    www.loremipsum.com
+                  </li>
+                  <li id="facebookTemplate">
+                    <i class="fa fa-facebook"></i>
+                    www.facebook.com/lorem
+                  </li>
+                  <li id="linkedinTemplate">
+                    <i class="fa fa-linkedin-square"></i>
+                    @loremipsum
+                  </li>
+                  <li id="twitterTemplate">
+                    <i class="fa fa-twitter"></i>
+                    37 Pramount St, London
+                  </li>
+                </ul>
+              </div>
+              <div class="hobbies-section">
+                <h3 class="main-title">Hobbies</h3>
+                <ul id="hobbies-list">
+                  <li>
+                    <p class="skill-title">Wordpress</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="references-section">
+                <h3 class="main-title">References</h3>
+                <div class="referee">
+                  <ul id="references-list">
+                    <li>
+                      <h6 class="sub-title">Rick Ross</h6>
+                      <p class="sub-para">Product Manager</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="languages-section">
+                <h3 class="main-title">Languages</h3>
+                <ul id="languages-list">
+                  <li>
+                    <p class="skill-title">Arabic:good</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="skills-section">
+                <h3 class="main-title">Skills</h3>
+                <ul id="skills-list">
+                  <li>
+                    <p class="skill-title">Wordpress:good</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="right-section">
+            <div class="right-main-content">
+              <section class="about sect">
+                <h2 class="right-title">About Me</h2>
+                <p class="para" id="profileDesc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto iusto porro suscipit. Nihil blanditiis cum
+                  voluptates odio recusandae deleniti, nulla repudiandae aliquam
+                  adipisci iusto reiciendis sequi labore quos ratione accusamus
+                  consectetur, libero ex assumenda pariatur commodi animi nobis,
+                  dolore id.
+                </p>
+              </section>
+              <section class="experince sect" id="experienceTemplate">
+                <h2 class="right-title">Experience</h2>
+                <div class="timeline">
+                  <div class="left-tl-content">
+                    <h5 class="tl-title">Microsoft</h5>
+                    <p class="para">2017 - 2019</p>
+                  </div>
+                  <div class="right-tl-content">
+                    <div class="tl-content">
+                      <h5 class="tl-title-2">Junior Developer</h5>
+                      <p class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias cupiditate vitae voluptatem deleniti,
+                        laboriosam odio nobis quae fugit facilis quo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="education sect" id="educationTemplate">
+                <h2 class="right-title">education</h2>
+                <div class="timeline">
+                  <div class="left-tl-content">
+                    <h5 class="tl-title">Cheney School</h5>
+                    <p class="para" id="major">engineering</p>
+                    <p class="para" id="date">2015 - 2016</p>
+                  </div>
+                  <div class="right-tl-content">
+                    <div class="tl-content">
+                      <h5 class="tl-title-2">Gcse's</h5>
+                      <p class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias cupiditate vitae voluptatem deleniti,
+                        laboriosam odio nobis quae fugit facilis quo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        document.getElementById('download').addEventListener('click', () => {
+          const invoice = this.document.getElementById('resumepdf');
+          var opt = {
+            margin: 1,
+            filename: 'myfile.pdf',
+            image: { type: 'png', quality: 0.98 },
+            html2canvas: { scale: 3, scrollY: 0 },
+            jsPDF: { unit: 'in', format: 'A3', orientation: 'portrait' },
+          };
+
+          html2pdf().from(invoice).set(opt).save();
+        });
+      };
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
