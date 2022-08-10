@@ -1,5 +1,5 @@
 #wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    right: 0px;
+    width: 50%;
 }
