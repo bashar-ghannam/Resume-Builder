@@ -1,17 +1,52 @@
 * {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-image: url('WhatsApp Image 2022-08-09 at 2.04.40 AM.jpeg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.main {
-  margin-top: 148px;
-  margin-left: 228px;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url('WhatsApp Image 2022-08-09 at 2.04.40 AM.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .main {
+    margin-top: 30%;
+    color: white;
+  }
+  
+  
+  
+    .main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 99px;
+      color: white;
+      font-family: 'Oleo Script Swash Caps', cursive;
+      text-align: center;
+    } 
+  
+    h1{
+      font-size: 80px;
+      opacity: 0.875;
+    }
+    p{
+  
+      font-family: 'Cairo', sans-serif;
+      width: 400px;
+      /* margin-left: 400px;
+      margin-top: 37px; */
+      font-size: 20px;
+    }
+    .btn{
+      margin-top: 15px; 
+    }
+  
+    .btn-secondary {
+      background-color: rgb(196,196,196);
+      color: black;
+    }
+#link{
+  text-decoration: none;
   color: white;
 }
-
-

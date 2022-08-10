@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: antiquewhite;
+    align-items: baseline;
+}
+
+.profile-pic {
+    display: inline-block;
+}
+
+.user-name-career {
+    display: inline-block;
+}
+
+.body-container {
+
+    display: flex;
+    align-items: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+.contact-container,
+.aboutMe-container,
+.competences-container,
+.languages-container,
+.references-container,
+.education-container,
+.work-experience-container {
+    margin: 15px;
+}
+
+#email,
+#network,
+#phone {
+    margin-top: 10px;
+}
