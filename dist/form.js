@@ -338,26 +338,26 @@ $('.add-skill').on('click', function () {
   }
   skillID++;
   $(this).closest('div').siblings('.accordion-body').append(`
-    <div class='skill-item mb-2 col-12' data-id=${skillID}>
-      <div class="mb-1">
-        <label for=skill-${skillID} class=form-label>Skill</label>
-        <input type="text" clss=form-control id=skill-${skillID} />
-       </div>
-       <div class="row">
-         <div class="skill-range col-8">
-           <label for=skill-range-${skillID} class=form-label>Level</label>
-           <input
-             type=range
-             class=form-range
-             min=0
-             value=0
-             max=5
-             step=1
-             id=skill-range-${skillID}
-           />
-         </div>
-         <div class="skill-evaluation col-4 pt-4"></div>
-       </div>
+    <div class='skill-item mb-2' data-id=${skillID}>
+        <div class="mb-1">
+          <label for=skill-${skillID} class=form-label>Skill</label>
+          <input type="text" class=form-control id=skill-${skillID} />
+        </div>
+        <div class="row">
+          <div class="skill-range col-8">
+            <label for=skill-range-${skillID} class=form-label>Level</label>
+            <input
+              type=range
+              class=form-range
+              min=0
+              value=0
+              max=5
+              step=1
+              id=skill-range-${skillID}
+            />
+          </div>
+          <div class="skill-evaluation col-4 pt-4"></div>
+        </div>
       <button type=button class="btn btn-outline-danger remove-skill">
         <svg
           xmlns=http://www.w3.org/2000/svg
@@ -498,6 +498,8 @@ $('.add-language').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-language', function () {
+  const languageID = $(this).closest('.language-item').data('id');
+  $(`#language${languageID}`).remove();
   $(this).closest('.language-item').remove();
 });
 
@@ -527,7 +529,12 @@ $('.accordion-body').on('click', '.send-language', function () {
     .closest('.language-item')
     .find('input[type=text]')
     .val();
-  console.log(language, languageEvaluation);
+  const languageID = $(this).closest('.language-item').data('id');
+  $('#languages-list').append(`
+    <li id='language${languageID}'>
+      <p class="skill-title">${language}:${languageEvaluation}</p>
+    </li>
+  `);
 });
 
 $('.languages').on('change', '.form-range', function () {
@@ -549,8 +556,8 @@ $('.add-hobby').on('click', function () {
   $(this).closest('div').siblings('.accordion-body').append(`
     <div class='hobby-item mb-2' data-id=${hobbyID}>
       <div class="mb-1">
-       <label for=hobby-${hobbyID} class=form-label>Hobby</label>
-       <input type="text" class=form-control id=hobby-${hobbyID} />
+        <label for=hobby-${hobbyID} class=form-label>Hobby</label>
+        <input type="text" class=form-control id=hobby-${hobbyID} />
        </div>
       <button type=button class="btn btn-outline-danger remove-hobby">
         <svg
@@ -587,11 +594,19 @@ $('.add-hobby').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-hobby', function () {
+  const hoppyID = $(this).closest('.hobby-item').data('id');
+  $(`#hoppy${hoppyID}`).remove();
   $(this).closest('.hobby-item').remove();
 });
 
 $('.accordion-body').on('click', '.send-hobby', function () {
-  console.log($(this).closest('.hobby-item').find('input').val());
+  const hoppy = $(this).closest('.hobby-item').find('input').val();
+  const hoppyID = $(this).closest('.hobby-item').data('id');
+  $('#hobbies-list').append(`
+    <li id=hoppy${hoppyID}>
+      <p class="skill-title">${hoppy}</p>
+    </li>
+  `);
 });
 
 //reference
@@ -646,14 +661,25 @@ $('.add-reference').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-reference', function () {
+  const referenceID = $(this).closest('.reference-item').data('id');
+  $(`#reference${referenceID}`).remove();
   $(this).closest('.reference-item').remove();
 });
 
 $('.accordion-body').on('click', '.send-reference', function () {
-  console.log(
-    $(this).closest('.reference-item').find('input:nth-child(2)').val()
-  );
-  console.log(
-    $(this).closest('.reference-item').find('input:nth-child(4)').val()
-  );
+  const reference = $(this)
+    .closest('.reference-item')
+    .find('input:nth-child(2)')
+    .val();
+  const referenceID = $(this).closest('.reference-item').data('id');
+  const referenceName = $(this)
+    .closest('.reference-item')
+    .find('input:nth-child(4)')
+    .val();
+  $('#references-list').append(`
+    <li id=reference${referenceID}>
+      <h6 class="sub-title">${referenceName}</h6>
+      <p class="sub-para">${reference}</p>
+    </li>
+  `);
 });
