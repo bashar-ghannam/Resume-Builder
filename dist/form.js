@@ -1,65 +1,92 @@
 //Personal Details
-$('#firstName').on('change', function () {
-  $('#personalFirstName').text('');
-  $('#personalFirstName').text($('#firstName').val());
+const firstName = $('#firstName');
+const templateFirstName = $('#personalFirstName');
+
+firstName.on('change', function () {
+  templateFirstName.text('');
+  templateFirstName.text(firstName.val());
 });
 
-$('#lastName').on('change', function () {
-  $('#personalSecondName').text('');
-  $('#personalSecondName').text($('#lastName').val());
+const lastName = $('#lastName');
+const templateLastName = $('#personalSecondName');
+
+lastName.on('change', function () {
+  templateLastName.text('');
+  templateLastName.text(lastName.val());
 });
 
-$('#JobTitle').on('change', function () {
-  $('#jobTitle').text('');
-  $('#jobTitle').text($('#JobTitle').val());
+const jobTitle = $('#JobTitle');
+const templateJobTitle = $('#jobTitle');
+
+jobTitle.on('change', function () {
+  templateJobTitle.text('');
+  templateJobTitle.text(jobTitle.val());
 });
 
-$('#phoneNumber').on('change', function () {
-  $('#personalPhone').empty();
-  $('#personalPhone').append(`
+const phoneNumber = $('#phoneNumber');
+const templatePhoneNumber = $('#personalPhone');
+
+phoneNumber.on('change', function () {
+  templatePhoneNumber.empty();
+  templatePhoneNumber.append(`
     <i class="fa fa-phone"></i>
-    ${$('#phoneNumber').val()}
+    ${phoneNumber.val()}
   `);
 });
 
-$('#email').on('change', function () {
-  $('#personalEmail').empty();
-  $('#personalEmail').append(`
+const email = $('#email');
+const templateEmail = $('#personalEmail');
+
+email.on('change', function () {
+  templateEmail.empty();
+  templateEmail.append(`
     <i class="fa fa-envelope"></i>
-    ${$('#email').val()}
+    ${email.val()}
   `);
 });
 
-$('#githubUrl').on('change', function () {
-  $('#githubTemplate').empty();
-  $('#githubTemplate').append(`
+const githubUrl = $('#githubUrl');
+const githubTemplate = $('#githubTemplate');
+const githubUsername = $('#githubUsername');
+const facebookUrl = $('#facebookUrl');
+const facebookTemplate = $('#facebookTemplate');
+const facebookUsername = $('#facebookUsername');
+const twitterUrl = $('#twitterUrl');
+const twitterTemplate = $('#twitterTemplate');
+const twitterUsername = $('#twitterUsername');
+const linkedinUrl = $('#linkedinUrl');
+const linkedinTemplate = $('#linkedinTemplate');
+const linkedinUsername = $('#linkedinUsername');
+
+$('.accordion-body').on('click', '.send-profiles', function () {
+  if (githubUrl && githubUsername) {
+    githubTemplate.empty();
+    githubTemplate.append(`
     <i class="fa fa-github"></i>
-    <a href=${$('#githubUrl').val()}>${$('#githubUsername').val()}</a>
+    <a href=${githubUrl.val()}>${githubUsername.val()}</a>
   `);
-});
-
-$('#facebookUrl').on('change', function () {
-  $('#facebookTemplate').empty();
-  $('#facebookTemplate').append(`
+  }
+  if (facebookUsername && facebookUrl) {
+    facebookTemplate.empty();
+    facebookTemplate.append(`
     <i class="fa fa-facebook"></i>
-    <a href=${$('#facebookUrl').val()}>${$('#facebookUsername').val()}</a>
+    <a href=${facebookUrl.val()}>${facebookUsername.val()}</a>
   `);
-});
-
-$('#twitterUrl').on('change', function () {
-  $('#twitterTemplate').empty();
-  $('#twitterTemplate').append(`
-    <i class="fa fa-twitter"></i>
-    <a href=${$('#twitterUrl').val()}>${$('#twitterUsername').val()}</a>
-  `);
-});
-
-$('#linkedinUrl').on('change', function () {
-  $('#linkedinTemplate').empty();
-  $('#linkedinTemplate').append(`
-    <i class="fa fa-linkedin-square"></i>
-    <a href=${$('#linkedinUrl').val()}>${$('#linkedinUsername').val()}</a>
-  `);
+  }
+  if (twitterUsername && twitterUrl) {
+    twitterTemplate.empty();
+    twitterTemplate.append(`
+      <i class="fa fa-twitter"></i>
+      <a href=${twitterUrl.val()}>${twitterUsername.val()}</a>
+    `);
+  }
+  if (linkedinUsername && linkedinUrl) {
+    linkedinTemplate.empty();
+    linkedinTemplate.append(`
+      <i class="fa fa-linkedin-square"></i>
+      <a href=${linkedinUrl.val()}>${linkedinUsername.val()}</a>
+    `);
+  }
 });
 
 $('#profile').on('change', function () {
