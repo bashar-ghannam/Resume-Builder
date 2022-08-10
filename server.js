@@ -6,10 +6,8 @@ const api = require('./server/routes/api');
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mydb', { useNewUrlParser: true })
 
 const app = express();
-
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
