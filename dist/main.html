@@ -1,0 +1,1096 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="styletemp.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="mainstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="header" style="background-color: black; height: 60px"></nav>
+    <main class="main">
+      <div
+        class="form"
+        style="position: absolute; top: 70px; left: 0; width: 44%; height: 100%"
+      >
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="false"
+                aria-controls="panelsStamyOpen-collapseOne"
+              >
+                <strong>Personal details</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                <form class="row g-3">
+                  <div class="mb-1 col-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="first name"
+                    />
+                  </div>
+                  <div class="mb-1 col-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="last name"
+                    />
+                  </div>
+                  <div class="mb-1 col-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="email"
+                    />
+                  </div>
+                  <div class="mb-1 col-6">
+                    <label for="phoneNumber" class="form-label"
+                      >Phone number</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="phoneNumber"
+                      placeholder="Phone number"
+                    />
+                  </div>
+                  <div class="mb-1">
+                    <label for="formImage" class="form-label">Image</label>
+                    <input class="form-control" type="file" id="formImage" />
+                  </div>
+                  <div class="mb-1 col-12">
+                    <label for="JobTitle" class="form-label">Job title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="JobTitle"
+                      placeholder="Job title"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                <strong>Profiles</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                <form class="row g-3">
+                  <div class="input-group col-6">
+                    <span class="input-group-text" id="basic-addon1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-github"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <input
+                      id="githubUsername"
+                      type="text"
+                      aria-label="githubUsername"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                    <input
+                      id="githubUrl"
+                      type="text"
+                      aria-label="githubUrl"
+                      class="form-control"
+                      placeholder="Url"
+                    />
+                  </div>
+                  <div class="input-group col-6">
+                    <span class="input-group-text" id="basic-addon1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-facebook"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <input
+                      id="facebookUsername"
+                      type="text"
+                      aria-label="facebookUsername"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                    <input
+                      id="facebookUrl"
+                      type="text"
+                      aria-label="facebookUrl"
+                      class="form-control"
+                      placeholder="Url"
+                    />
+                  </div>
+                  <div class="input-group col-6">
+                    <span class="input-group-text" id="basic-addon1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-linkedin"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <input
+                      id="linkedinUsername"
+                      type="text"
+                      aria-label="linkedinUsername"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                    <input
+                      id="linkedinUrl"
+                      type="text"
+                      aria-label="linkedinUrl"
+                      class="form-control"
+                      placeholder="Url"
+                    />
+                  </div>
+                  <div class="input-group col-6">
+                    <span class="input-group-text" id="basic-addon1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-twitter"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <input
+                      id="twitterUsername"
+                      type="text"
+                      aria-label="twitterUsername"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                    <input
+                      id="twitterUrl"
+                      type="text"
+                      aria-label="twitterUrl"
+                      class="form-control"
+                      placeholder="Url"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                <strong>Professional Profile</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                <div class="mb-1">
+                  <label for="profile" class="form-label">Profile</label>
+                  <textarea
+                    class="form-control"
+                    id="profile"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                <strong>Education</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFour"
+            >
+              <div class="accordion-body educations">
+                <div class="education-item mb-3" data-id="1">
+                  <form class="row">
+                    <div class="mb-1 col-12">
+                      <label for="education-1" class="form-label"
+                        >Education</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="education-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="educationUniversity-1" class="form-label"
+                        >University</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="educationUniversity-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label
+                        for="educationUniversityAddress-1"
+                        class="form-label"
+                        >Address</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="educationUniversityAddress-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="educationStartDate-1" class="form-label"
+                        >Start Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="educationStartDate-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="educationEndDate-1" class="form-label"
+                        >End Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="educationEndDate-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-12">
+                      <label for="educationDescription-1" class="form-label"
+                        >Description</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="educationDescription-1"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                  </form>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger remove-education"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                      ></path>
+                    </svg>
+                    Remove
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success send-education"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      ></path>
+                    </svg>
+                    Done
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mb-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary add-education"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    ></path>
+                  </svg>
+                  Add Another Education
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                <strong>Works</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFive"
+            >
+              <div class="accordion-body works">
+                <div class="work-item mb-3" data-id="1">
+                  <form class="row">
+                    <div class="mb-1 col-12">
+                      <label for="workPosition-1" class="form-label"
+                        >Position</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="workPosition-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="workEmployer-1" class="form-label"
+                        >Employer</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="workEmployer-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="workAddress-1" class="form-label"
+                        >Address</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="workAddress-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="workStartDate-1" class="form-label"
+                        >Start Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="workStartDate-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-6">
+                      <label for="workEndDate-1" class="form-label"
+                        >End Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="workEndDate-1"
+                      />
+                    </div>
+                    <div class="mb-1 col-12">
+                      <label for="workDescription-1" class="form-label"
+                        >Description</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="workDescription-1"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                  </form>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger remove-work"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                      ></path>
+                    </svg>
+                    Remove
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success send-work"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      ></path>
+                    </svg>
+                    Done
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-outline-primary add-work">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    ></path>
+                  </svg>
+                  Add Another Work
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSix"
+              >
+                <strong>Skills</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSix"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingSix"
+            >
+              <div class="accordion-body skills">
+                <div class="skill-item mb-2" data-id="1">
+                  <div class="mb-1">
+                    <label for="skill-1" class="form-label">Skill</label>
+                    <input type="text" class="form-control" id="skill-1" />
+                  </div>
+                  <div class="row">
+                    <div class="skill-range col-8">
+                      <label for="skill-range-1" class="form-label"
+                        >Level</label
+                      >
+                      <input
+                        type="range"
+                        class="form-range"
+                        min="0"
+                        max="5"
+                        value="0"
+                        step="1"
+                        id="skill-range-1"
+                      />
+                    </div>
+                    <div class="skill-evaluation col-4 pt-4"></div>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger remove-skill"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                      ></path>
+                    </svg>
+                    Remove Skill
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success send-skill"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      ></path>
+                    </svg>
+                    Done
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-outline-primary add-skill">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    ></path>
+                  </svg>
+                  Add Skill
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSeven"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSeven"
+              >
+                <strong>Languages</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSeven"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingSeven"
+            >
+              <div class="accordion-body languages">
+                <div class="language-item mb-2" data-id="1">
+                  <div class="mb-1">
+                    <label for="language-1" class="form-label">Language</label>
+                    <input type="text" class="form-control" id="language-1" />
+                  </div>
+                  <div class="row">
+                    <div class="language-range col-8">
+                      <label for="language-range-1" class="form-label"
+                        >Level</label
+                      >
+                      <input
+                        type="range"
+                        class="form-range"
+                        min="0"
+                        value="0"
+                        max="5"
+                        step="1"
+                        id="language-range-1"
+                      />
+                    </div>
+                    <div class="language-evaluation col-4 pt-4"></div>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger remove-language"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                      ></path>
+                    </svg>
+                    Remove Language
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success send-language"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      ></path>
+                    </svg>
+                    Done
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mb-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary add-language"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    ></path>
+                  </svg>
+                  Add language
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseEight"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseEight"
+              >
+                <strong>Hobbies</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseEight"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingEight"
+            >
+              <div class="accordion-body hobbies">
+                <div class="hobby-item mb-2" data-id="1">
+                  <div class="mb-1">
+                    <label for="hobby-1" class="form-label">Hobby</label>
+                    <input type="text" class="form-control" id="hobby-1" />
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger remove-hobby"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                      ></path>
+                    </svg>
+                    Remove Hobby
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success send-hobby"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      ></path>
+                    </svg>
+                    Done
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-outline-primary add-hobby">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    ></path>
+                  </svg>
+                  Add Hobby
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseNine"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseNine"
+              >
+                <strong>References</strong>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseNine"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingNine"
+            >
+              <div class="accordion-body references">
+                <div class="reference-item mb-2" data-id="1">
+                  <div class="mb-1">
+                    <label for="reference-1" class="form-label"
+                      >Reference</label
+                    >
+                    <input type="text" class="form-control" id="reference-1" />
+                    <label for="referenceName-1" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="referenceName-1"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger remove-reference"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                      ></path>
+                    </svg>
+                    Remove Reference
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success send-reference"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      ></path>
+                    </svg>
+                    Done
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mb-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary add-reference"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    ></path>
+                  </svg>
+                  Add Reference
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wrap">
+        <div
+          class="template"
+          style="
+            -webkit-transform: scale(0.6);
+            position: absolute;
+            top: 70px;
+            left: 46%;
+            width: 55%;
+            height: 100%;
+          "
+        >
+          <main class="main-content">
+            <section class="left-section">
+              <div class="left-content">
+                <div class="templateProfile">
+                  <div class="image">
+                    <!-- <img src="/avatar.jpg" alt="" /> -->
+                  </div>
+                  <h2 class="name" id="personalFirstName">Lorem Dola Ipsum</h2>
+                  <h2 class="name" id="personalSecondName"></h2>
+                  <p class="career" id="jobTitle">Software Engineer</p>
+                </div>
+                <div class="contact-info">
+                  <h3 class="main-title">Contact Info</h3>
+                  <ul>
+                    <li id="personalPhone">
+                      <i class="fa fa-phone"></i>
+                      07661892982
+                    </li>
+                    <li id="personalEmail">
+                      <i class="fa fa-envelope"></i>
+                      loremipsum@gmail.com
+                    </li>
+                    <li id="githubTemplate">
+                      <i class="fa fa-github"></i>
+                      www.loremipsum.com
+                    </li>
+                    <li id="facebookTemplate">
+                      <i class="fa fa-facebook"></i>
+                      www.facebook.com/lorem
+                    </li>
+                    <li id="linkedinTemplate">
+                      <i class="fa fa-linkedin-square"></i>
+                      @loremipsum
+                    </li>
+                    <li id="twitterTemplate">
+                      <i class="fa fa-twitter"></i>
+                      37 Pramount St, London
+                    </li>
+                  </ul>
+                </div>
+                <div class="hobbies-section">
+                  <h3 class="main-title">Hobbies</h3>
+                  <ul id="hobbies-list">
+                    <li>
+                      <p class="skill-title">Wordpress</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="references-section">
+                  <h3 class="main-title">References</h3>
+                  <div class="referee">
+                    <ul id="references-list">
+                      <li>
+                        <h6 class="sub-title">Rick Ross</h6>
+                        <p class="sub-para">Product Manager</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="languages-section">
+                  <h3 class="main-title">Languages</h3>
+                  <ul id="languages-list">
+                    <li>
+                      <p class="skill-title">Arabic:good</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skills-section">
+                  <h3 class="main-title">Skills</h3>
+                  <ul id="skills-list">
+                    <li>
+                      <p class="skill-title">Wordpress:good</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="right-section">
+              <div class="right-main-content">
+                <section class="about sect">
+                  <h2 class="right-title">About Me</h2>
+                  <p class="para" id="profileDesc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto iusto porro suscipit. Nihil blanditiis cum
+                    voluptates odio recusandae deleniti, nulla repudiandae
+                    aliquam adipisci iusto reiciendis sequi labore quos ratione
+                    accusamus consectetur, libero ex assumenda pariatur commodi
+                    animi nobis, dolore id.
+                  </p>
+                </section>
+                <section class="experince sect" id="experienceTemplate">
+                  <h2 class="right-title">Experience</h2>
+                  <div class="timeline">
+                    <div class="left-tl-content">
+                      <h5 class="tl-title">Microsoft</h5>
+                      <p class="para">2017 - 2019</p>
+                    </div>
+                    <div class="right-tl-content">
+                      <div class="tl-content">
+                        <h5 class="tl-title-2">Junior Developer</h5>
+                        <p class="para">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Molestias cupiditate vitae voluptatem deleniti,
+                          laboriosam odio nobis quae fugit facilis quo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="education sect" id="educationTemplate">
+                  <h2 class="right-title">education</h2>
+                  <div class="timeline">
+                    <div class="left-tl-content">
+                      <h5 class="tl-title">Cheney School</h5>
+                      <p class="para" id="major">engineering</p>
+                      <p class="para" id="date">2015 - 2016</p>
+                    </div>
+                    <div class="right-tl-content">
+                      <div class="tl-content">
+                        <h5 class="tl-title-2">Gcse's</h5>
+                        <p class="para">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Molestias cupiditate vitae voluptatem deleniti,
+                          laboriosam odio nobis quae fugit facilis quo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>

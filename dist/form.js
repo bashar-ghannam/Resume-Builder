@@ -1,3 +1,72 @@
+//Personal Details
+$('#firstName').on('change', function () {
+  $('#personalFirstName').text('');
+  $('#personalFirstName').text($('#firstName').val());
+});
+
+$('#lastName').on('change', function () {
+  $('#personalSecondName').text('');
+  $('#personalSecondName').text($('#lastName').val());
+});
+
+$('#JobTitle').on('change', function () {
+  $('#jobTitle').text('');
+  $('#jobTitle').text($('#JobTitle').val());
+});
+
+$('#phoneNumber').on('change', function () {
+  $('#personalPhone').empty();
+  $('#personalPhone').append(`
+    <i class="fa fa-phone"></i>
+    ${$('#phoneNumber').val()}
+  `);
+});
+
+$('#email').on('change', function () {
+  $('#personalEmail').empty();
+  $('#personalEmail').append(`
+    <i class="fa fa-envelope"></i>
+    ${$('#email').val()}
+  `);
+});
+
+$('#githubUrl').on('change', function () {
+  $('#githubTemplate').empty();
+  $('#githubTemplate').append(`
+    <i class="fa fa-github"></i>
+    <a href=${$('#githubUrl').val()}>${$('#githubUsername').val()}</a>
+  `);
+});
+
+$('#facebookUrl').on('change', function () {
+  $('#facebookTemplate').empty();
+  $('#facebookTemplate').append(`
+    <i class="fa fa-facebook"></i>
+    <a href=${$('#facebookUrl').val()}>${$('#facebookUsername').val()}</a>
+  `);
+});
+
+$('#twitterUrl').on('change', function () {
+  $('#twitterTemplate').empty();
+  $('#twitterTemplate').append(`
+    <i class="fa fa-twitter"></i>
+    <a href=${$('#twitterUrl').val()}>${$('#twitterUsername').val()}</a>
+  `);
+});
+
+$('#linkedinUrl').on('change', function () {
+  $('#linkedinTemplate').empty();
+  $('#linkedinTemplate').append(`
+    <i class="fa fa-linkedin-square"></i>
+    <a href=${$('#linkedinUrl').val()}>${$('#linkedinUsername').val()}</a>
+  `);
+});
+
+$('#profile').on('change', function () {
+  $('#profileDesc').text('');
+  $('#profileDesc').text($('textarea#profile').val());
+});
+
 //education
 $('.add-education').on('click', function () {
   let educationID = $('.educations')
@@ -106,6 +175,8 @@ $('.add-education').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-education', function () {
+  const id = $(this).closest('.education-item').data('id');
+  $(`.educationItem${id}`).remove();
   $(this).closest('.education-item').remove();
 });
 
@@ -119,14 +190,24 @@ $('.accordion-body').on('click', '.send-education', function () {
   const educationStartDate = $(`#educationStartDate-${educationID}`).val();
   const educationEndDate = $(`#educationEndDate-${educationID}`).val();
   const educationDescription = $(`#educationDescription-${educationID}`).val();
-  console.log(
-    education,
-    educationUniversity,
-    educationUniversityAddress,
-    educationStartDate,
-    educationEndDate,
-    educationDescription
-  );
+  $('#educationTemplate').append(`
+  <div class="timeline educationItem${educationID}">
+    <div class="left-tl-content">
+      <h5 class="tl-title" >
+        ${educationUniversity}
+      </h5>
+      <p class="para" id="major">${education}</p>
+      <p class="para" id="date">${educationStartDate} - ${educationEndDate}</p>
+    </div>
+    <div class="right-tl-content">
+      <div class="tl-content">
+        <h5 class="tl-title-2">${educationUniversityAddress}</h5>
+        <p class="para">    ${educationDescription}
+        </p>
+      </div>
+    </div>
+  </div>
+  `);
 });
 
 //work
@@ -217,6 +298,8 @@ $('.add-work').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-work', function () {
+  const id = $(this).closest('.work-item').data('id');
+  $(`.experienceItem${id}`).remove();
   $(this).closest('.work-item').remove();
 });
 
@@ -228,14 +311,23 @@ $('.accordion-body').on('click', '.send-work', function () {
   const workStartDate = $(`#workStartDate-${workID}`).val();
   const workEndDate = $(`#workEndDate-${workID}`).val();
   const workDescription = $(`#workDescription-${workID}`).val();
-  console.log(
-    workPosition,
-    workEmployer,
-    workAddress,
-    workStartDate,
-    workEndDate,
-    workDescription
-  );
+  $('#experienceTemplate').append(`
+  <div class="timeline experienceItem${workID}">
+    <div class="left-tl-content">
+      <h5 class="tl-title">${workEmployer}</h5>
+      <p class="para">${workStartDate} - ${workEndDate}</p>
+      <p class="para">${workAddress}</p>
+    </div>
+    <div class="right-tl-content">
+      <div class="tl-content">
+        <h5 class="tl-title-2">${workPosition}</h5>
+        <p class="para">
+          ${workDescription}
+        </p>
+      </div>
+    </div>
+  </div>
+  `);
 });
 
 //skill
@@ -247,25 +339,25 @@ $('.add-skill').on('click', function () {
   skillID++;
   $(this).closest('div').siblings('.accordion-body').append(`
     <div class='skill-item mb-2' data-id=${skillID}>
-      <div class="mb-1">
-       <label for=skill-${skillID} class=form-label>Skill</label>
-       <input type="text" class=form-control id=skill-${skillID} />
-       </div>
-       <div class="row">
-         <div class="skill-range col-8">
-           <label for=skill-range-${skillID} class=form-label>Level</label>
-           <input
-             type=range
-             class=form-range
-             min=0
-             value=0
-             max=5
-             step=1
-             id=skill-range-${skillID}
-           />
-         </div>
-         <div class="skill-evaluation col-4 pt-4"></div>
-       </div>
+        <div class="mb-1">
+          <label for=skill-${skillID} class=form-label>Skill</label>
+          <input type="text" class=form-control id=skill-${skillID} />
+        </div>
+        <div class="row">
+          <div class="skill-range col-8">
+            <label for=skill-range-${skillID} class=form-label>Level</label>
+            <input
+              type=range
+              class=form-range
+              min=0
+              value=0
+              max=5
+              step=1
+              id=skill-range-${skillID}
+            />
+          </div>
+          <div class="skill-evaluation col-4 pt-4"></div>
+        </div>
       <button type=button class="btn btn-outline-danger remove-skill">
         <svg
           xmlns=http://www.w3.org/2000/svg
@@ -301,6 +393,8 @@ $('.add-skill').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-skill', function () {
+  const skillID = $(this).closest('.skill-item').data('id');
+  $(`#skill${skillID}`).remove();
   $(this).closest('.skill-item').remove();
 });
 
@@ -324,7 +418,12 @@ $('.accordion-body').on('click', '.send-skill', function () {
   const skillRange = $(this).closest('.skill-item').find('.form-range').val();
   const skillEvaluation = getSkillEvaluation(skillRange);
   const skill = $(this).closest('.skill-item').find('input[type=text]').val();
-  console.log(skill, skillEvaluation);
+  const skillID = $(this).closest('.skill-item').data('id');
+  $('#skills-list').append(`
+    <li id='skill${skillID}'>
+      <p class="skill-title">${skill} : ${skillEvaluation}</p>
+    </li>
+  `);
 });
 
 $('.skills').on('change', '.form-range', function () {
@@ -399,6 +498,8 @@ $('.add-language').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-language', function () {
+  const languageID = $(this).closest('.language-item').data('id');
+  $(`#language${languageID}`).remove();
   $(this).closest('.language-item').remove();
 });
 
@@ -428,7 +529,12 @@ $('.accordion-body').on('click', '.send-language', function () {
     .closest('.language-item')
     .find('input[type=text]')
     .val();
-  console.log(language, languageEvaluation);
+  const languageID = $(this).closest('.language-item').data('id');
+  $('#languages-list').append(`
+    <li id='language${languageID}'>
+      <p class="skill-title">${language}:${languageEvaluation}</p>
+    </li>
+  `);
 });
 
 $('.languages').on('change', '.form-range', function () {
@@ -450,8 +556,8 @@ $('.add-hobby').on('click', function () {
   $(this).closest('div').siblings('.accordion-body').append(`
     <div class='hobby-item mb-2' data-id=${hobbyID}>
       <div class="mb-1">
-       <label for=hobby-${hobbyID} class=form-label>Hobby</label>
-       <input type="text" class=form-control id=hobby-${hobbyID} />
+        <label for=hobby-${hobbyID} class=form-label>Hobby</label>
+        <input type="text" class=form-control id=hobby-${hobbyID} />
        </div>
       <button type=button class="btn btn-outline-danger remove-hobby">
         <svg
@@ -488,11 +594,19 @@ $('.add-hobby').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-hobby', function () {
+  const hoppyID = $(this).closest('.hobby-item').data('id');
+  $(`#hoppy${hoppyID}`).remove();
   $(this).closest('.hobby-item').remove();
 });
 
 $('.accordion-body').on('click', '.send-hobby', function () {
-  console.log($(this).closest('.hobby-item').find('input').val());
+  const hoppy = $(this).closest('.hobby-item').find('input').val();
+  const hoppyID = $(this).closest('.hobby-item').data('id');
+  $('#hobbies-list').append(`
+    <li id=hoppy${hoppyID}>
+      <p class="skill-title">${hoppy}</p>
+    </li>
+  `);
 });
 
 //reference
@@ -547,14 +661,25 @@ $('.add-reference').on('click', function () {
 });
 
 $('.accordion-body').on('click', '.remove-reference', function () {
+  const referenceID = $(this).closest('.reference-item').data('id');
+  $(`#reference${referenceID}`).remove();
   $(this).closest('.reference-item').remove();
 });
 
 $('.accordion-body').on('click', '.send-reference', function () {
-  console.log(
-    $(this).closest('.reference-item').find('input:nth-child(2)').val()
-  );
-  console.log(
-    $(this).closest('.reference-item').find('input:nth-child(4)').val()
-  );
+  const reference = $(this)
+    .closest('.reference-item')
+    .find('input:nth-child(2)')
+    .val();
+  const referenceID = $(this).closest('.reference-item').data('id');
+  const referenceName = $(this)
+    .closest('.reference-item')
+    .find('input:nth-child(4)')
+    .val();
+  $('#references-list').append(`
+    <li id=reference${referenceID}>
+      <h6 class="sub-title">${referenceName}</h6>
+      <p class="sub-para">${reference}</p>
+    </li>
+  `);
 });

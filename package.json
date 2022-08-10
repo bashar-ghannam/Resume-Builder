@@ -11,15 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "bootstrap": "^5.2.0",
     "express": "^4.18.1",
     "handlebars": "^4.0.12",
-    "jquery": "npm:jQuery@^1.7.4",
-    "jQuery": "^1.7.4",
-    "moment": "^2.23.0",
-    "mongoose": "^5.4.0",
-    "nodemon": "^2.0.19",
-    "request": "^2.88.0"
+    "jquery": "^3.6.0",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
   },
   "repository": {
     "type": "git",
