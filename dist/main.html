@@ -24,7 +24,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
     <title>Document</title>
   </head>
   <body>
@@ -94,7 +93,12 @@
                   </div>
                   <div class="mb-1">
                     <label for="formImage" class="form-label">Image</label>
-                    <input class="form-control" type="file" id="formImage" onchange="readURL(this);"/>
+                    <input
+                      class="form-control"
+                      type="file"
+                      id="formImage"
+                      onchange="readURL(this);"
+                    />
                   </div>
                   <div class="mb-1 col-12">
                     <label for="JobTitle" class="form-label">Job title</label>
@@ -958,63 +962,49 @@
           </div>
         </div>
       </div>
-      <div class="template" style="width: 100%">
+      <div class="template">
         <main class="main-content" id="resumepdf">
           <section class="left-section">
             <div class="left-content">
               <div class="templateProfile">
                 <div class="image">
-                  <img src="" alt="" />
-        <div
-          class="template" 
-          style="
-            
-            width: 100%;
-          "
-        >
-          <main class="main-content"  id="resumepdf">
-            <section class="left-section">
-              <div class="left-content">
-                <div class="templateProfile">
-                  <div class="image">
-                    <img src="#" alt="" id="avatar" /> 
-                  </div>
-                  <h2 class="name">
-                    <span class="name" id="personalFirstName">Lorem Dola Ipsum</span>
-                    <span class="name" id="personalSecondName"></span>
-                  </h2>
-                  
-                  <p class="career" id="jobTitle">Software Engineer</p>
->>>>>>> cssWork
+                  <img
+                    src=""
+                    width="30px"
+                    style="border-radius: 50%"
+                    alt=""
+                    id="avatar"
+                  />
                 </div>
                 <h2 class="name">
-                  <span class="name" id="personalFirstName"></span>
-                  <span class="name" id="personalSecondName"></span>
+                  <span id="personalFirstName"></span>
+                  <span id="personalSecondName"></span>
                 </h2>
                 <p class="career" id="jobTitle"></p>
               </div>
-              <div class="contact-info">
-                <h3 class="main-title">Contact Info</h3>
-                <ul id="contact-list"></ul>
+              <p class="career" id="jobTitle"></p>
+            </div>
+            <div class="contact-info">
+              <h3 class="main-title">Contact Info</h3>
+              <ul id="contact-list"></ul>
+            </div>
+            <div class="hobbies-section">
+              <h3 class="main-title">Hobbies</h3>
+              <ul id="hobbies-list"></ul>
+            </div>
+            <div class="references-section">
+              <h3 class="main-title">References</h3>
+              <div class="referee">
+                <ul id="references-list"></ul>
               </div>
-              <div class="hobbies-section">
-                <h3 class="main-title">Hobbies</h3>
-                <ul id="hobbies-list"></ul>
-              </div>
-              <div class="references-section">
-                <h3 class="main-title">References</h3>
-                <div class="referee">
-                  <ul id="references-list"></ul>
-                </div>
-              </div>
-              <div class="languages-section">
-                <h3 class="main-title">Languages</h3>
-                <ul id="languages-list"></ul>
-              </div>
-              <div class="skills-section">
-                <h3 class="main-title">Skills</h3>
-                <ul id="skills-list"></ul>
-              </div>
+            </div>
+            <div class="languages-section">
+              <h3 class="main-title">Languages</h3>
+              <ul id="languages-list"></ul>
+            </div>
+            <div class="skills-section">
+              <h3 class="main-title">Skills</h3>
+              <ul id="skills-list"></ul>
             </div>
           </section>
           <section class="right-section">
@@ -1034,7 +1024,6 @@
         </main>
       </div>
     </div>
-
     <script>
       window.onload = function () {
         document.getElementById('download').addEventListener('click', () => {

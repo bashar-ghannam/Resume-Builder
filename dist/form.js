@@ -430,7 +430,7 @@ $('.accordion-body').on('click', '.remove-skill', function () {
 });
 
 const getSkillEvaluation = function (skillRange) {
-  let skillEvaluation = '';
+  let skillEvaluation = 'fresh';
   if (skillRange == 1) {
     skillEvaluation = 'Beginner';
   } else if (skillRange == 2) {
@@ -535,7 +535,7 @@ $('.accordion-body').on('click', '.remove-language', function () {
 });
 
 const getLanguageEvaluation = function (languageRange) {
-  let languageEvaluation = '';
+  let languageEvaluation = 'fresh';
   if (languageRange == 1) {
     languageEvaluation = 'Beginner';
   } else if (languageRange == 2) {
