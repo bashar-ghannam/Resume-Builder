@@ -252,6 +252,12 @@ a.button3:hover {
   width: 40%;
   height: 100%;
 }
+.profile img{
+  width: 100%;
+  border-radius: 50%;
+  border: 8px solid #002333;
+  
+}
 /*Media Querries*/
 
 @media screen and (max-width: 800px) {

@@ -94,7 +94,7 @@
                   </div>
                   <div class="mb-1">
                     <label for="formImage" class="form-label">Image</label>
-                    <input class="form-control" type="file" id="formImage" />
+                    <input class="form-control" type="file" id="formImage" onchange="readURL(this);"/>
                   </div>
                   <div class="mb-1 col-12">
                     <label for="JobTitle" class="form-label">Job title</label>
@@ -965,6 +965,27 @@
               <div class="templateProfile">
                 <div class="image">
                   <img src="" alt="" />
+        <div
+          class="template" 
+          style="
+            
+            width: 100%;
+          "
+        >
+          <main class="main-content"  id="resumepdf">
+            <section class="left-section">
+              <div class="left-content">
+                <div class="templateProfile">
+                  <div class="image">
+                    <img src="#" alt="" id="avatar" /> 
+                  </div>
+                  <h2 class="name">
+                    <span class="name" id="personalFirstName">Lorem Dola Ipsum</span>
+                    <span class="name" id="personalSecondName"></span>
+                  </h2>
+                  
+                  <p class="career" id="jobTitle">Software Engineer</p>
+>>>>>>> cssWork
                 </div>
                 <h2 class="name">
                   <span class="name" id="personalFirstName"></span>
@@ -1036,6 +1057,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/jquery/dist/jquery.js"></script>
+    <script src="image.js"></script>
     <script src="form.js"></script>
   </body>
 </html>
