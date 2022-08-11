@@ -24,24 +24,24 @@ jobTitle.on('change', function () {
 });
 
 const phoneNumber = $('#phoneNumber');
-const templatePhoneNumber = $('#personalPhone');
+const email = $('#email');
+const contactList = $('#contact-list');
 
 phoneNumber.on('change', function () {
-  templatePhoneNumber.empty();
-  templatePhoneNumber.append(`
+  contactList.append(`
+  <li id="personalPhone">
     <i class="fa fa-phone"></i>
     ${phoneNumber.val()}
+  </li>
   `);
 });
 
-const email = $('#email');
-const templateEmail = $('#personalEmail');
-
 email.on('change', function () {
-  templateEmail.empty();
-  templateEmail.append(`
+  contactList.append(`
+  <li id="personalEmail">
     <i class="fa fa-envelope"></i>
     ${email.val()}
+  </li>
   `);
 });
 
@@ -59,32 +59,36 @@ const linkedinTemplate = $('#linkedinTemplate');
 const linkedinUsername = $('#linkedinUsername');
 
 $('.accordion-body').on('click', '.send-profiles', function () {
-  if (githubUrl && githubUsername) {
-    githubTemplate.empty();
-    githubTemplate.append(`
-    <i class="fa fa-github"></i>
-    <a href=${githubUrl.val()}>${githubUsername.val()}</a>
+  if (githubUrl.val() != '' && githubUsername.val() != '') {
+    contactList.append(`
+    <li>
+      <i class="fa fa-github"></i>
+      <a href=${githubUrl.val()}>${githubUsername.val()}</a>
+    </li>
   `);
   }
-  if (facebookUsername && facebookUrl) {
-    facebookTemplate.empty();
-    facebookTemplate.append(`
-    <i class="fa fa-facebook"></i>
-    <a href=${facebookUrl.val()}>${facebookUsername.val()}</a>
+  if (facebookUsername.val() != '' && facebookUrl.val() != '') {
+    contactList.append(`
+    <li>
+      <i class="fa fa-facebook"></i>
+      <a href=${facebookUrl.val()}>${facebookUsername.val()}</a>
+    </li>
   `);
   }
-  if (twitterUsername && twitterUrl) {
-    twitterTemplate.empty();
-    twitterTemplate.append(`
-      <i class="fa fa-twitter"></i>
-      <a href=${twitterUrl.val()}>${twitterUsername.val()}</a>
+  if (twitterUsername.val() != '' && twitterUrl.val() != '') {
+    contactList.append(`
+      <li>
+        <i class="fa fa-twitter"></i>
+        <a href=${twitterUrl.val()}>${twitterUsername.val()}</a>
+    </li>
     `);
   }
-  if (linkedinUsername && linkedinUrl) {
-    linkedinTemplate.empty();
-    linkedinTemplate.append(`
+  if (linkedinUsername.val() != '' && linkedinUrl.val() != '') {
+    contactList.append(`
+    <li>
       <i class="fa fa-linkedin-square"></i>
       <a href=${linkedinUrl.val()}>${linkedinUsername.val()}</a>
+    </li>
     `);
   }
 });

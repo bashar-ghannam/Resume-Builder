@@ -1,9 +1,14 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .main-content {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
 .template {
   position: fixed;
+  height: 1400px;
   top: -320px;
   right: -230px;
   padding: 30px;
